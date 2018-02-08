@@ -1,0 +1,21 @@
+diff --git a/src/Controller/SunshineController.php b/src/Controller/SunshineController.php
+index cca2937..942720b 100644
+--- a/src/Controller/SunshineController.php
++++ b/src/Controller/SunshineController.php
+@@ -8,11 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
+ class SunshineController extends Controller
+ {
+     /**
+-     * @Route("/miami")
++     * @Route("/miami/{neighborhood}")
+      */
+-    public function miami()
++    public function miami($neighborhood)
+     {
++        $neighborhood = ucwords(str_replace('-', ' ', $neighborhood));
++
+         return $this->json([
++            'neighborhood' => $neighborhood,
+             'highlights' => ['beaches', 'Cuban food', 'no snow', 'Adam Culp']
+         ]);
+     }

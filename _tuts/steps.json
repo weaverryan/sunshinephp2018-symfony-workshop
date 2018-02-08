@@ -1,0 +1,120 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "setup-install-server",
+            "name": "Setup: Install server",
+            "description": null
+        },
+        {
+            "id": "routes-yaml-route-json-endpoint",
+            "name": "Routes: Yaml route + JSON endpoint",
+            "description": null
+        },
+        {
+            "id": "routes-annotations",
+            "name": "Routes: Annotations",
+            "description": null
+        },
+        {
+            "id": "routes-dynamic-path",
+            "name": "Routes: Dynamic path",
+            "description": null
+        },
+        {
+            "id": "template-install-twig",
+            "name": "Template: Install Twig",
+            "description": null
+        },
+        {
+            "id": "template-render-template",
+            "name": "Template: Render template",
+            "description": null
+        },
+        {
+            "id": "logger-install-logger",
+            "name": "Logger: Install logger",
+            "description": null
+        },
+        {
+            "id": "logger-use-the-logger",
+            "name": "Logger: Use the logger",
+            "description": null
+        },
+        {
+            "id": "debug-install-debug",
+            "name": "Debug: Install debug",
+            "description": null
+        },
+        {
+            "id": "orm-install-it",
+            "name": "ORM: Install it",
+            "description": null
+        },
+        {
+            "id": "orm-generate-entity",
+            "name": "ORM: Generate entity",
+            "description": null
+        },
+        {
+            "id": "orm-new-fields-getters-setters",
+            "name": "ORM: New fields + getters\/setters",
+            "description": null
+        },
+        {
+            "id": "orm-generate-migration",
+            "name": "ORM: Generate migration",
+            "description": null
+        },
+        {
+            "id": "orm-load-up-data",
+            "name": "ORM: Load up data",
+            "description": null
+        },
+        {
+            "id": "orm-query-for-highlights",
+            "name": "ORM: Query for highlights",
+            "description": null
+        },
+        {
+            "id": "api-install-api",
+            "name": "API: Install API",
+            "description": null
+        },
+        {
+            "id": "api-add-apiplatform-annotation",
+            "name": "API: Add @ApiPlatform annotation",
+            "description": null
+        },
+        {
+            "id": "api-install-cors",
+            "name": "API: Install cors",
+            "description": null
+        },
+        {
+            "id": "subscriber-generate-subscriber",
+            "name": "Subscriber: Generate subscriber",
+            "description": null
+        },
+        {
+            "id": "subscriber-dump-event",
+            "name": "Subscriber: dump event",
+            "description": null
+        },
+        {
+            "id": "subscriber-dump-user-agent",
+            "name": "Subscriber: Dump User-Agent",
+            "description": null
+        },
+        {
+            "id": "subscriber-log-user-agent",
+            "name": "Subscriber: log user agent",
+            "description": null
+        }
+    ],
+    "sha": "31079b13c82067a4d6c02e898e9afe45d226b532"
+}

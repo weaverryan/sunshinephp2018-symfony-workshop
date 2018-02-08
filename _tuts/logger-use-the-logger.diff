@@ -1,0 +1,30 @@
+diff --git a/src/Controller/SunshineController.php b/src/Controller/SunshineController.php
+index c921166..c7c79ca 100644
+--- a/src/Controller/SunshineController.php
++++ b/src/Controller/SunshineController.php
+@@ -2,6 +2,7 @@
+ 
+ namespace App\Controller;
+ 
++use Psr\Log\LoggerInterface;
+ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+ use Symfony\Component\Routing\Annotation\Route;
+ 
+@@ -10,7 +11,7 @@ class SunshineController extends Controller
+     /**
+      * @Route("/miami/{neighborhood}")
+      */
+-    public function miami($neighborhood)
++    public function miami($neighborhood, LoggerInterface $logger)
+     {
+         $neighborhood = ucwords(str_replace('-', ' ', $neighborhood));
+ 
+@@ -18,6 +19,8 @@ class SunshineController extends Controller
+ //            'highlights' => ['beaches', 'Cuban food', 'no snow', 'Adam Culp']
+ //        ]);
+ 
++        $logger->info('Talking about the neighborhood: '.$neighborhood);
++
+         return $this->render('sunshine/miami.html.twig', [
+             'neighborhood' => $neighborhood,
+             'highlights' => ['beaches', 'Cuban food', 'no snow', 'Adam Culp']

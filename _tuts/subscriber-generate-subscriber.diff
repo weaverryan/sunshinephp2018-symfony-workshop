@@ -1,0 +1,27 @@
+diff --git a/src/EventSubscriber/UserAgentLoggerSubscriber.php b/src/EventSubscriber/UserAgentLoggerSubscriber.php
+new file mode 100644
+index 0000000..0cd604b
+--- /dev/null
++++ b/src/EventSubscriber/UserAgentLoggerSubscriber.php
+@@ -0,0 +1,21 @@
++<?php
++
++namespace App\EventSubscriber;
++
++use Symfony\Component\EventDispatcher\EventSubscriberInterface;
++use Symfony\Component\HttpKernel\Event\GetResponseEvent;
++
++class UserAgentLoggerSubscriber implements EventSubscriberInterface
++{
++    public function onKernelRequest(GetResponseEvent $event)
++    {
++        // ...
++    }
++
++    public static function getSubscribedEvents()
++    {
++        return [
++           'kernel.request' => 'onKernelRequest',
++        ];
++    }
++}
