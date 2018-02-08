@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hiya {{ neighborhood }}, Miami!</h1>
+
+    <ul>
+        {% for highlight in highlights %}
+            <li>{{ highlight }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

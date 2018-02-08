@@ -14,7 +14,11 @@ class SunshineController extends Controller
     {
         $neighborhood = ucwords(str_replace('-', ' ', $neighborhood));
 
-        return $this->json([
+//        return $this->json([
+//            'highlights' => ['beaches', 'Cuban food', 'no snow', 'Adam Culp']
+//        ]);
+
+        return $this->render('sunshine/miami.html.twig', [
             'neighborhood' => $neighborhood,
             'highlights' => ['beaches', 'Cuban food', 'no snow', 'Adam Culp']
         ]);
