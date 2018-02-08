@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\MiamiHighlight;
+use App\Repository\MiamiHighlightRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -48,7 +49,7 @@ class SunshineController extends Controller
     /**
      * @Route("/miami/{neighborhood}")
      */
-    public function miami($neighborhood, LoggerInterface $logger)
+    public function miami($neighborhood, LoggerInterface $logger, MiamiHighlightRepository $repo)
     {
         $neighborhood = ucwords(str_replace('-', ' ', $neighborhood));
 
@@ -58,9 +59,11 @@ class SunshineController extends Controller
 
         $logger->info('Talking about the neighborhood: '.$neighborhood);
 
+        $highlights = $repo->findAll();
+
         return $this->render('sunshine/miami.html.twig', [
             'neighborhood' => $neighborhood,
-            'highlights' => ['beaches', 'Cuban food', 'no snow', 'Adam Culp']
+            'highlights' => $highlights
         ]);
     }
 }

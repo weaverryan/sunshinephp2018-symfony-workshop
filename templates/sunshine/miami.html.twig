@@ -5,7 +5,7 @@
 
     <ul>
         {% for highlight in highlights %}
-            <li>{{ highlight }}</li>
+            <li>{{ highlight.name }} ({{ highlight.description }})</li>
         {% endfor %}
     </ul>
 {% endblock %}
